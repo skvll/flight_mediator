@@ -1,0 +1,476 @@
+### Variables de configuration
+@baseUrl = http://localhost:9091
+@endpoint = {{baseUrl}}/graphql
+@contentType = application/json
+
+### ===========================================
+### TESTS SKYWINGS AIRLINES - ROUTES PRINCIPALES
+### ===========================================
+
+### SkyWings Airlines - CDG vers JFK (Route principale)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"CDG\", offPoint: \"JFK\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### SkyWings Airlines - ORY vers LHR (Route Londres)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"ORY\", offPoint: \"LHR\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### SkyWings Airlines - CDG vers LAX (Route Pacifique)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"CDG\", offPoint: \"LAX\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### SkyWings Airlines - BCN vers JFK (Route Barcelone-New York)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"BCN\", offPoint: \"JFK\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### SkyWings Airlines - LHR vers BRU (Route Londres-Bruxelles)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"LHR\", offPoint: \"BRU\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### SkyWings Airlines - FCO vers AMS (Route Rome-Amsterdam)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"FCO\", offPoint: \"AMS\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### ===========================================
+### TESTS AEROVOYAGE - ROUTES LONG-COURRIERS
+### ===========================================
+
+### AeroVoyage - FRA vers LAX (Route Allemagne-USA)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"AeroVoyage\", boardPoint: \"FRA\", offPoint: \"LAX\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### AeroVoyage - ORY vers LAX (Route Paris-Los Angeles)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"AeroVoyage\", boardPoint: \"ORY\", offPoint: \"LAX\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### AeroVoyage - CDG vers SFO (Route Paris-San Francisco)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"AeroVoyage\", boardPoint: \"CDG\", offPoint: \"SFO\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### AeroVoyage - ORY vers SIN (Route Singapour)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"AeroVoyage\", boardPoint: \"ORY\", offPoint: \"SIN\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### AeroVoyage - ORY vers NRT (Route Tokyo)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"AeroVoyage\", boardPoint: \"ORY\", offPoint: \"NRT\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### AeroVoyage - CDG vers HKG (Route Hong Kong)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"AeroVoyage\", boardPoint: \"CDG\", offPoint: \"HKG\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### AeroVoyage - CDG vers SYD (Route Sydney)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"AeroVoyage\", boardPoint: \"CDG\", offPoint: \"SYD\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### AeroVoyage - ORY vers MEL (Route Melbourne)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"AeroVoyage\", boardPoint: \"ORY\", offPoint: \"MEL\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### ===========================================
+### TESTS OCEANJET AIRWAYS - ROUTES ASIE-PACIFIQUE
+### ===========================================
+
+### OceanJet Airways - CDG vers ICN (Route Séoul)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"OceanJet Airways\", boardPoint: \"CDG\", offPoint: \"ICN\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### OceanJet Airways - ORY vers TPE (Route Taipei)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"OceanJet Airways\", boardPoint: \"ORY\", offPoint: \"TPE\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### OceanJet Airways - CDG vers KUL (Route Kuala Lumpur)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"OceanJet Airways\", boardPoint: \"CDG\", offPoint: \"KUL\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### OceanJet Airways - ORY vers BKK (Route Bangkok)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"OceanJet Airways\", boardPoint: \"ORY\", offPoint: \"BKK\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### OceanJet Airways - CDG vers DEL (Route New Delhi)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"OceanJet Airways\", boardPoint: \"CDG\", offPoint: \"DEL\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### OceanJet Airways - ORY vers BOM (Route Mumbai)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"OceanJet Airways\", boardPoint: \"ORY\", offPoint: \"BOM\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### OceanJet Airways - CDG vers PEK (Route Beijing)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"OceanJet Airways\", boardPoint: \"CDG\", offPoint: \"PEK\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### OceanJet Airways - ORY vers SIN (Route Singapour)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"OceanJet Airways\", boardPoint: \"ORY\", offPoint: \"SIN\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### OceanJet Airways - CDG vers HKG (Route Hong Kong)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"OceanJet Airways\", boardPoint: \"CDG\", offPoint: \"HKG\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### ===========================================
+### TESTS DE CAS LIMITES
+### ===========================================
+
+### Test - Route inexistante (CDG vers XXX)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"CDG\", offPoint: \"XXX\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### Test - Opérateur inexistant
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"Unknown Airline\", boardPoint: \"CDG\", offPoint: \"JFK\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### Test - Aéroport de départ inexistant
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"XXX\", offPoint: \"JFK\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### Test - Paramètres vides
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"\", boardPoint: \"CDG\", offPoint: \"JFK\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### ===========================================
+### TESTS AVEC VARIABLES GRAPHQL
+### ===========================================
+
+### Test avec variables - SkyWings Airlines CDG-JFK
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query GetFlights($operator: String!, $boardPoint: String!, $offPoint: String!) { flights(operator: $operator, boardPoint: $boardPoint, offPoint: $offPoint) { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }",
+  "variables": {
+    "operator": "SkyWings Airlines",
+    "boardPoint": "CDG",
+    "offPoint": "JFK"
+  }
+}
+
+### Test avec variables - AeroVoyage ORY-SIN
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query GetFlights($operator: String!, $boardPoint: String!, $offPoint: String!) { flights(operator: $operator, boardPoint: $boardPoint, offPoint: $offPoint) { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }",
+  "variables": {
+    "operator": "AeroVoyage",
+    "boardPoint": "ORY",
+    "offPoint": "SIN"
+  }
+}
+
+### Test avec variables - OceanJet Airways CDG-ICN
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query GetFlights($operator: String!, $boardPoint: String!, $offPoint: String!) { flights(operator: $operator, boardPoint: $boardPoint, offPoint: $offPoint) { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }",
+  "variables": {
+    "operator": "OceanJet Airways",
+    "boardPoint": "CDG",
+    "offPoint": "ICN"
+  }
+}
+
+### ===========================================
+### TESTS DE SÉLECTION DE CHAMPS LIMITÉE
+### ===========================================
+
+### Test - Seulement ID et statut
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"CDG\", offPoint: \"JFK\") { flightId status } }"
+}
+
+### Test - Seulement informations de départ
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"AeroVoyage\", boardPoint: \"ORY\", offPoint: \"SIN\") { flightId operator departure { airport scheduledTime } } }"
+}
+
+### Test - Seulement informations d'arrivée
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"OceanJet Airways\", boardPoint: \"CDG\", offPoint: \"ICN\") { flightId operator arrival { airport scheduledTime } } }"
+}
+
+### Test - Champs minimaux
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"CDG\", offPoint: \"JFK\") { flightId } }"
+}
+
+### ===========================================
+### TESTS DE VALIDATION DES DONNÉES
+### ===========================================
+
+### Test - Validation format des heures
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"AeroVoyage\", boardPoint: \"ORY\", offPoint: \"NRT\") { flightId departure { scheduledTime } arrival { scheduledTime } } }"
+}
+
+### Test - Validation codes aéroports (3 lettres)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"BCN\", offPoint: \"ORY\") { flightId departure { airport } arrival { airport } } }"
+}
+
+### Test - Validation statuts de vol
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"OceanJet Airways\", boardPoint: \"ORY\", offPoint: \"TPE\") { flightId status } }"
+}
+
+### ===========================================
+### TESTS DE ROUTES RETOUR
+### ===========================================
+
+### Test - Vol retour JFK vers CDG (SkyWings Airlines)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"JFK\", offPoint: \"CDG\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### Test - Vol retour SIN vers ORY (AeroVoyage)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"AeroVoyage\", boardPoint: \"SIN\", offPoint: \"ORY\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### Test - Vol retour ICN vers CDG (OceanJet Airways)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"OceanJet Airways\", boardPoint: \"ICN\", offPoint: \"CDG\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### ===========================================
+### TESTS DE PERFORMANCE ET CHARGE
+### ===========================================
+
+### Test - Requête complexe avec tous les champs
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"CDG\", offPoint: \"JFK\") { flightId operator status departure { airport scheduledTime } arrival { airport scheduledTime } } }"
+}
+
+### Test - Requête multiple avec alias
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { skyWings: flights(operator: \"SkyWings Airlines\", boardPoint: \"CDG\", offPoint: \"JFK\") { flightId status } aeroVoyage: flights(operator: \"AeroVoyage\", boardPoint: \"ORY\", offPoint: \"SIN\") { flightId status } oceanJet: flights(operator: \"OceanJet Airways\", boardPoint: \"CDG\", offPoint: \"ICN\") { flightId status } }"
+}
+
+### ===========================================
+### TESTS DE SYNTAXE GRAPHQL
+### ===========================================
+
+### Test - Requête avec fragments
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "fragment FlightInfo on FlightsItem { flightId operator status } query { flights(operator: \"SkyWings Airlines\", boardPoint: \"CDG\", offPoint: \"JFK\") { ...FlightInfo departure { airport } arrival { airport } } }"
+}
+
+### Test - Requête avec directive (si supportée)
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query GetFlights($includeTime: Boolean = true) { flights(operator: \"AeroVoyage\", boardPoint: \"ORY\", offPoint: \"SIN\") { flightId operator status departure { airport scheduledTime @include(if: $includeTime) } arrival { airport scheduledTime @include(if: $includeTime) } } }",
+  "variables": {
+    "includeTime": true
+  }
+}
+
+### ===========================================
+### TESTS DE VÉRIFICATION DU SERVICE
+### ===========================================
+
+### Test - Vérification que le service répond
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"CDG\", offPoint: \"JFK\") { flightId } }"
+}
+
+### Test - Requête simple pour debug
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "{ flights(operator: \"SkyWings Airlines\", boardPoint: \"CDG\", offPoint: \"JFK\") { flightId operator } }"
+}
+
+### ===========================================
+### TESTS D'ERREURS GRAPHQL
+### ===========================================
+
+### Test - Syntaxe GraphQL invalide
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\" boardPoint: \"CDG\", offPoint: \"JFK\") { flightId } }"
+}
+
+### Test - Champ inexistant
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"CDG\", offPoint: \"JFK\") { flightId invalidField } }"
+}
+
+### Test - Paramètre manquant
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { flights(operator: \"SkyWings Airlines\", boardPoint: \"CDG\") { flightId } }"
+}
+
+### ===========================================
+### TESTS SUPPLÉMENTAIRES AVEC DESTINATIONS INTERNATIONALES
+### ===========================================
+
+### Test - Tous les vols SkyWings Airlines depuis CDG
+POST {{endpoint}}
+Content-Type: {{contentType}}
+
+{
+  "query": "query { cdgToJfk: flights(operator: \"SkyWings Airlines\", boardPoint: \"CDG\", offPoint: \"JFK\") { flightId status } cdgToLax: flights(operator: \"SkyWings Airlines\", boardPoint: \"CDG\", offPoint: \"LAX\") { flightId status } cdgToFco: flights(operator: \"SkyWings Airlines\", boardPoint: \"CDG\", offPoint: \"FCO\") { flightId status } }"
+}
+
+### Test - Tous les vols AeroVoyage long-
