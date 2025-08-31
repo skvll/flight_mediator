@@ -2,6 +2,10 @@
 
 The purpose of this sample is to demonstrate a ballerina integration service acting as a mediation Layer to search flights based on searching criteria like company, departure/arrival airport.
 
+This sample is articulated in two parts:
+* The first part is to install, run and test the sample
+* The second part provide a ![Walkthough guide](./TUTORIAL.md) which describes how to redo step by step this implementation using the Low-Code interface from Ballerina Integrator
+
 ## Overview
 
 This service exposes a simple REST API that internally communicates with a GraphQL backend service to retrieve flight information. It's designed for demonstration purposes with a simplified data structure and minimal error handling.
@@ -72,7 +76,7 @@ Output:
 
 ### Example of query
 
-You can refer to the value [Mock](./flight_backend_mock//README.md) to test several combination
+You can refer to the value [Mock](./flight_backend_mock/README.md) to test several combination
 
 Example 1: Paris CDG to New York JFK from SkyWings Airlines
 ```bash
@@ -94,10 +98,9 @@ HttpServicePort = 9090
 FlightGraphQLService = "http://localhost:9091/graphql"
 ```
 
-## TODO
+## Walthrough
 
-Add a step by step low code implementation.
-![Overview](./flight_mediator/docs/images/lowcode.png)
+The ![link](./TUTORIAL.md) describes how to redo step by step the implementation using the Low Code interface from Ballerina Integrator
 
 ## Disclaimer
 

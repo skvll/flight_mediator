@@ -18,6 +18,18 @@ type FlightsItem record {|
 
 type Flights FlightsItem[];
 
-type GraphQLFlightData record {|
+type FlightData record {|
     Flights flights;
+|};
+
+type FlightBackendGraphQLResponse record {|
+    FlightData data;
+    map<json> extensions?;
+    record {}[] errors?;
+|};
+
+type RequestResponse record {|
+    string api_version;
+    int size;
+    Flights data;
 |};

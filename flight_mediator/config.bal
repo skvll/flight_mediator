@@ -1,2 +1,2 @@
-configurable string FlightGraphQLService = "http://localhost:9091/graphql";
-configurable int HttpServicePort = 9090;
+configurable string FlightBackendUrl = "http://localhost:9091/graphql";
+configurable int RestServicePort = 9090;
