@@ -1,6 +1,6 @@
 [package]
 org = "mri"
-name = "flight_graphql_mock"
+name = "flight_backend_mock"
 version = "0.1.0"
 
 [build-options]

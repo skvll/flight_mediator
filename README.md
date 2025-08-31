@@ -29,7 +29,7 @@ GET /flight_mediator/flights
 
 ### Start the Flight Service Mock Service (GraphQL)
 ```bash
-cd flight_graphql_mock
+cd flight_backend_mock
 bal run
 ```
 
@@ -72,7 +72,7 @@ Output:
 
 ### Example of query
 
-You can refer to the value [Mock](./flight_graphql_mock//README.md) to test several combination
+You can refer to the value [Mock](./flight_backend_mock//README.md) to test several combination
 
 Example 1: Paris CDG to New York JFK from SkyWings Airlines
 ```bash

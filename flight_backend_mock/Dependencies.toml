@@ -341,12 +341,12 @@ dependencies = [
 
 [[package]]
 org = "mri"
-name = "flight_graphql_mock"
+name = "flight_backend_mock"
 version = "0.1.0"
 dependencies = [
 	{org = "ballerina", name = "graphql"}
 ]
 modules = [
-	{org = "mri", packageName = "flight_graphql_mock", moduleName = "flight_graphql_mock"}
+	{org = "mri", packageName = "flight_backend_mock", moduleName = "flight_backend_mock"}
 ]
 
