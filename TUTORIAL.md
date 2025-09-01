@@ -19,45 +19,36 @@ Install WSO2 Integrator (https://bi.docs.wso2.com/get-started/install-wso2-integ
 5. Add the service base path as **/flight_mediator** and select the Design from Scratch option as the The contract of the service.
 5. Click on the Create button to create the new service with the specified configurations.
 
+![Step2](./flight_mediator/docs/images/step2_http_service.png)
+
 ### Step 3: Define types
 1. Click on the Add Artifacts button and select Type in the Other Artifacts section.
-2. Click Import Tab, Select JSON format, name it **Flights** and press Import
+2. Click Import Tab, Select JSON format, name it **FlightBackendGraphQLResponse** and press Import
 
 ```
-[
-    {
-        "flightId": "SW1234",
-        "operator": "SkyWings Airlines",
-        "status": "On Time",
-        "departure": {
-            "airport": "CDG",
-            "scheduledTime": "2024-01-15T10:30:00Z"
-        },
-        "arrival": {
-            "airport": "JFK",
-            "scheduledTime": "2024-01-15T14:45:00Z"
-        }
-    },
-    {
-        "flightId": "SW5678",
-        "operator": "SkyWings Airlines",
-        "status": "Delayed",
-        "departure": {
-            "airport": "CDG",
-            "scheduledTime": "2024-01-15T14:20:00Z"
-        },
-        "arrival": {
-            "airport": "JFK",
-            "scheduledTime": "2024-01-15T18:35:00Z"
-        }
+{
+    "data": {
+        "flights": [
+            {
+                "flightId": "SW3456",
+                "operator": "SkyWings Airlines",
+                "status": "On Time",
+                "departure": {
+                    "airport": "ORY",
+                    "scheduledTime": "2024-01-15T07:15:00Z"
+                },
+                "arrival": {
+                    "airport": "LHR",
+                    "scheduledTime": "2024-01-15T08:30:00Z"
+                }
+            }
+        ]
     }
-]
+}
 ```
 
 3. Click on Artifact and add a new Type
-4. Create from Scratch, kind Array name **FlightBackendGraphQLResponse** and Type of the Array **Flights**
-5. Redo the same step to create a new Type (Create from Scratch)
-6. Create a record, name: **RequestResponse**, add two fields as follow:
+4. Create a record, name: **RequestResponse**, add two fields as follow:
    1. version: string
    2. size: int
    3. data: Flights
@@ -83,6 +74,8 @@ Install WSO2 Integrator (https://bi.docs.wso2.com/get-started/install-wso2-integ
         - string departureDateTo
 5. Change the success response code to 200 with Body Type **RequestResponse**
 6. Press Save
+
+![Step5](./flight_mediator/docs/images/step5_rest_endpoint.png)
 
 ### Step 6: Make the GraphQL Query toward the Flight backend
 1. Click on the /flights endpoint
@@ -129,3 +122,6 @@ string `
 1. Hover to the arrow after previous block and click the ➕ button to add a new action to the resource.
 2. Select Return in the Control section
 3. Select the **RequestResponse** and press save
+
+### Step 9: Test
+Refer to [README](./README.md)

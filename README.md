@@ -4,7 +4,7 @@ The purpose of this sample is to demonstrate a ballerina integration service act
 
 This sample is articulated in two parts:
 * The first part is to install, run and test the sample
-* The second part provide a ![Walkthough guide](./TUTORIAL.md) which describes how to redo step by step this implementation using the Low-Code interface from Ballerina Integrator
+* The second part provide a [Walkthough guide](./TUTORIAL.md) which describes how to redo step by step this implementation using the Low-Code interface from Ballerina Integrator
 
 ## Overview
 
@@ -100,7 +100,7 @@ FlightGraphQLService = "http://localhost:9091/graphql"
 
 ## Walthrough
 
-The ![link](./TUTORIAL.md) describes how to redo step by step the implementation using the Low Code interface from Ballerina Integrator
+The [link](./TUTORIAL.md) describes how to redo step by step the implementation using the Low Code interface from Ballerina Integrator
 
 ## Disclaimer
 
